@@ -65,12 +65,15 @@ This project is deployed on GitHub Pages:
 
 **Add Task Popup:**  
 ![Add Task Popup]<img width="2055" alt="Screenshot 2025-06-25 at 13 59 32" src="https://github.com/user-attachments/assets/37cb25ae-6152-413d-bc35-a0b1090df2eb" />
-<img width="2055" alt="Screenshot 2025-06-25 at 13 59 32" src="https://github.com/user-attachments/assets/37cb25ae-6152-413d-bc35-a0b1090df2eb" />
+<img width="2055" alt="Screenshot 2025-06-25 at 13 59 14" src="https://github.com/user-attachments/assets/7974c349-43a8-491b-8ac9-238903e90377" />
+
+
+
 
 
 **Task List Example:**  
 ![Task List Example]<img width="2054" alt="Screenshot 2025-06-25 at 13 58 49" src="https://github.com/user-attachments/assets/a0da8879-b74a-47f6-8af2-64b099c32847" />
-<img width="2054" alt="Screenshot 2025-06-25 at 13 58 49" src="https://github.com/user-attachments/assets/a0da8879-b74a-47f6-8af2-64b099c32847" />
+
 
 
 ---
