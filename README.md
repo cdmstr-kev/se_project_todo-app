@@ -64,7 +64,7 @@ This project is deployed on GitHub Pages:
 ### Example Screenshots
 
 **Add Task Popup:**  
-![Add Task Popup]<img width="2055" alt="Screenshot 2025-06-25 at 13 59 32" src="https://github.com/user-attachments/assets/37cb25ae-6152-413d-bc35-a0b1090df2eb" />
+<img width="2055" alt="Screenshot 2025-06-25 at 13 59 32" src="https://github.com/user-attachments/assets/37cb25ae-6152-413d-bc35-a0b1090df2eb" />
 <img width="2055" alt="Screenshot 2025-06-25 at 13 59 14" src="https://github.com/user-attachments/assets/7974c349-43a8-491b-8ac9-238903e90377" />
 
 
@@ -72,7 +72,7 @@ This project is deployed on GitHub Pages:
 
 
 **Task List Example:**  
-![Task List Example]<img width="2056" alt="Screenshot 2025-06-25 at 14 11 33" src="https://github.com/user-attachments/assets/e63b067d-d07a-4d48-a675-b6fbe1290bee" />
+<img width="2056" alt="Screenshot 2025-06-25 at 14 11 33" src="https://github.com/user-attachments/assets/e63b067d-d07a-4d48-a675-b6fbe1290bee" />
 
 
 
