@@ -72,7 +72,9 @@ This project is deployed on GitHub Pages:
 
 
 **Task List Example:**  
-![Task List Example]<img width="2054" alt="Screenshot 2025-06-25 at 13 58 49" src="https://github.com/user-attachments/assets/a0da8879-b74a-47f6-8af2-64b099c32847" />
+![Task List Example]<img width="2056" alt="Screenshot 2025-06-25 at 14 11 33" src="https://github.com/user-attachments/assets/e63b067d-d07a-4d48-a675-b6fbe1290bee" />
+
+
 
 
 
