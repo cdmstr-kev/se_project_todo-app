@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 import Todo from "../components/Todo.js";
 import { initialTodos, validationConfig } from "../utils/constants.js";
 import FormValidator from "../components/FormValidator.js";
+import Section from "../utils/Section.js";
 
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopup = document.querySelector("#add-todo-popup");
@@ -9,6 +10,14 @@ const addTodoForm = document.forms["add-todo-form"]
 const addTodoCloseBtn = addTodoPopup.querySelector(".popup__close");
 const todosList = document.querySelector(".todos__list");
 const newTodoFormValidator = new FormValidator(validationConfig, addTodoForm);
+const section = new Section({
+  items: [initialTodos],
+  renderer: (data) => {
+    const todoElement = generateTodo(data);
+    data.addItem(todoElement);
+  },
+  containerSelector: ".todos__list"
+});
 
 newTodoFormValidator.enableValidation();
 
@@ -37,7 +46,9 @@ addTodoCloseBtn.addEventListener("click", () => {
 
 const renderTodo = (data) => {
   const todoElement = generateTodo(data);
-  todosList.append(todoElement);
+  // todosList.append(todoElement);
+  data.addItem(todoElement);
+
 }
 
 addTodoForm.addEventListener("submit", (evt) => {
@@ -51,7 +62,8 @@ addTodoForm.addEventListener("submit", (evt) => {
 
   const id = uuidv4();
   const values = { name, date, id };
-  renderTodo(values);
+  renderTodo(values); // may have to change this line of code to use the class method.
+
   newTodoFormValidator.resetValidation();
   closeModal(addTodoPopup);
 });
