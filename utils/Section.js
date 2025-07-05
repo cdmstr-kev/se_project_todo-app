@@ -1,10 +1,8 @@
 export default class Section {
-    //run console.log on the constructor to verify that 
-    // you have everything set up correctly when you get on the computer
-    constructor ({items,renderer,containerSelector}) {
-       console.log(this._items = items);
-        console.log(this._renderer = renderer);
-        console.log(this._container = document.querySelector(containerSelector));
+    constructor({ items, renderer, containerSelector }) {
+        this._items = items;
+        this._renderer = renderer;
+        this._container = document.querySelector(containerSelector);
     }
 
     renderItems() {
