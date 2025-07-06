@@ -1,7 +1,9 @@
 class Todo {
-  constructor(data, selector) {
+  constructor(data, selector, handleCheckboxChange, handleDelete) {
     this._data = data;
     this._templateElement = document.querySelector(selector);
+    this._handleCheckboxChange = handleCheckboxChange;
+    this.handleDelete = handleDelete;
   }
 
   _setEventListeners() {
@@ -9,10 +11,12 @@ class Todo {
 
     todoDeleteBtn.addEventListener("click", () => {
       this._todoElement.remove();
+      this.handleDelete(this._data.completed);
     });
 
     this._todoCheckboxEl.addEventListener("change", (evt) => {
       this._data.completed = evt.target.checked;
+      this._handleCheckboxChange(this._data.completed);
     });
   }
 
@@ -35,8 +39,6 @@ class Todo {
 
     todoNameEl.textContent = this._data.name;
 
-    // If a due date has been set, parsing this it with `new Date` will return a
-    // number. If so, we display a string version of the due date in the todo.
     const dueDate = new Date(this._data.date);
     if (!isNaN(dueDate)) {
       todoDate.textContent = `Due: ${dueDate.toLocaleString("en-US", {
