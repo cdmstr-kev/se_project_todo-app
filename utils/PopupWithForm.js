@@ -1,39 +1,38 @@
-import Popup from "./popup.js"; 
+import Popup from "./popup.js";
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 export default class PopupWithForm extends Popup {
-  constructor({ popupSelector, submitCallback }) {
+  constructor({ popupSelector, handleFormSubmit }) {
     super({ popupSelector });
-    this._submitCallback = submitCallback;
+    this._handleFormSubmit = handleFormSubmit;
+    this._form = this.popupElement.querySelector(".popup__form");
+    this.inputValues = this._form.querySelectorAll(".popup__input");
   }
 
   _getInputValues() {
-    // const nameInput = this.popupElement.querySelector("#todo-name").value;
-    // const dateInput = this.popupElement.querySelector("#todo-date").value;
+    const inputValues = {};
 
-    // console.log(nameInput);
-    // console.log(dateInput);
+    this.inputValues.forEach((input) => {
+      inputValues[input.name] = input.value;
+    });
 
-    // // Create a date object and adjust for timezone
-    // // const date = new Date(dateInput);
-    // // date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+    const date = new Date(inputValues.date);
+    date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 
-    // const id = uuidv4();
-    // const values = { name: nameInput, dateInput, id };
-    // console.log("Values to submit:", values);
-    // // return values;
+
+    const id = uuidv4();
+
+    return { name: inputValues.name, date: date, id };
   }
 
   setEventListeners() {
     super.setEventListeners();
 
-    // this.popupElement.addEventListener("submit", (evt) => {
-    //   evt.preventDefault();
-    //   const formData = this._getInputValues();
-    //   console.log("Form Data:", formData);
-    // //   this._submitCallback(formData);
-    // });
+    this._form.addEventListener("submit", (evt) => {
+      evt.preventDefault();
+      const formData = this._getInputValues();
+
+      this._handleFormSubmit(formData);
+    });
   }
 }
-
-//continue from trying to import the input values from the form in PopupWithForm.js
