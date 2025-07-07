@@ -3,7 +3,7 @@ class Todo {
     this._data = data;
     this._templateElement = document.querySelector(selector);
     this._handleCheckboxChange = handleCheckboxChange;
-    this.handleDelete = handleDelete;
+    this._handleDelete = handleDelete;
   }
 
   _setEventListeners() {
@@ -11,7 +11,7 @@ class Todo {
 
     todoDeleteBtn.addEventListener("click", () => {
       this._todoElement.remove();
-      this.handleDelete(this._data.completed);
+      this._handleDelete(this._data.completed);
     });
 
     this._todoCheckboxEl.addEventListener("change", (evt) => {
